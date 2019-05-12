@@ -11,6 +11,9 @@
 
 BOT_NAME = 'tutorial'
 
+MYEXT_ENABLED=True
+MYEXT_ITEMCOUNT = 1111
+
 SPIDER_MODULES = ['tutorial.spiders']
 NEWSPIDER_MODULE = 'tutorial.spiders'
 
@@ -58,9 +61,10 @@ ROBOTSTXT_OBEY = True
 
 # Enable or disable extensions
 # See https://doc.scrapy.org/en/latest/topics/extensions.html
-#EXTENSIONS = {
+EXTENSIONS = {
+    'tutorial.myextends.SpiderOpenCloseLogging':100
 #    'scrapy.extensions.telnet.TelnetConsole': None,
-#}
+}
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
